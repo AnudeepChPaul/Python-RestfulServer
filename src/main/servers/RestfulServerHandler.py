@@ -11,18 +11,6 @@ from models.TodoModel import TodoModel
 from stores.TodoStore import TodoStore
 
 
-if __name__ == "main":
-    store = TodoStore()
-    todo1 = TodoModel("todo1", "dataaaaaaa")
-    todo2 = TodoModel("todo2", "dataaaaaaa")
-
-    store.add_todo(todo1)
-    store.add_todo(todo2)
-
-    print(store.get_todos().__getitem__(0).get_created_on())
-    print(todo1)
-
-
 class RestfulServerHandler(BaseHTTPRequestHandler):
 
     def do_GET(self):
